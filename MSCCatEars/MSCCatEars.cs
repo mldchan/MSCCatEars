@@ -39,14 +39,24 @@ namespace MSCCatEars
             foreach (var gameObject in Resources.FindObjectsOfTypeAll<GameObject>())
             {
                 var path = GO_Path(gameObject);
-                if ((!path.Contains("skeleton/pelvis/spine_middle/spine_upper/HeadPivot/head") &&
-                     !path.Contains("skeleton/pelvis/RotationPivot/spine_middle/spine_upper/HeadPivot/head")) ||
-                    gameObject.transform.parent.name != "HeadPivot") continue;
-                var inst = GameObject.Instantiate(catEars);
-                inst.transform.parent = gameObject.transform;
-                inst.transform.localPosition = new Vector3(-0.2001f, 0.006f, -0.1217f);
-                inst.transform.localEulerAngles = new Vector3(1.22f, -180.407f, -87.094f);
-                inst.transform.localScale = Vector3.one * 0.08102f;
+                if (path.Contains("skeleton/pelvis/spine_middle/spine_upper/HeadPivot/head") &&
+                    gameObject.transform.parent.name == "HeadPivot")
+                {
+                    var inst = GameObject.Instantiate(catEars);
+                    inst.transform.parent = gameObject.transform;
+                    inst.transform.localPosition = new Vector3(-0.2001f, 0.006f, -0.1217f);
+                    inst.transform.localEulerAngles = new Vector3(1.22f, -180.407f, -87.094f);
+                    inst.transform.localScale = Vector3.one * 0.08102f;
+                }
+
+                if (path.Contains("skeleton/pelvis/RotationPivot/spine_middle/spine_upper/head") && gameObject.transform.parent.name == "spine_upper")
+                {
+                    var inst = GameObject.Instantiate(catEars);
+                    inst.transform.parent = gameObject.transform;
+                    inst.transform.localPosition = new Vector3(-0.2001f, 0.006f, -0.1217f);
+                    inst.transform.localEulerAngles = new Vector3(1.22f, -180.407f, -87.094f);
+                    inst.transform.localScale = Vector3.one * 0.08102f;
+                }
             }
         }
 
