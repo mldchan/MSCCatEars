@@ -34,6 +34,8 @@ namespace MSCCatEars
 
             var catEars = assetBundle.LoadAsset<GameObject>("catears");
 
+            assetBundle.Unload(false);
+            
             foreach (var gameObject in Resources.FindObjectsOfTypeAll<GameObject>())
             {
                 var path = GO_Path(gameObject);
