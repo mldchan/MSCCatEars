@@ -3,8 +3,6 @@ My Summer Cat Ears
 
 ## Installation
 
-### NexusMods
-
 1. Go to releases
 2. Download the DLL file from the latest release
 3. Place the file in your mods folder
