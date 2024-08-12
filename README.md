@@ -5,13 +5,6 @@ My Summer Cat Ears
 
 ### NexusMods
 
-1. Go [here](https://www.nexusmods.com/mysummercar/mods/5993)
-2. Go to the Files tab
-3. Download the mod
-4. Extract it in your mods folder
-
-### GitHub
-
 1. Go to releases
 2. Download the DLL file from the latest release
 3. Place the file in your mods folder
